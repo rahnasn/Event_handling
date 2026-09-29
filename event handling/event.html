@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+        /* Base button style */
+        .attractive-btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        /* Hover style via CSS (smooth effect) */
+        .attractive-btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <button id="myButton" class="attractive-btn">Click Me!</button>
+
+    <script>
+        // Select the button
+        const button = document.getElementById('myButton');
+
+        // Mouse hover (mouseenter) event in JS
+        button.addEventListener('mouseenter', () => {
+            console.log('Mouse is over the button!');
+        });
+
+        // Mouse leave event to reset or change back
+        button.addEventListener('mouseleave', () => {
+            console.log('Mouse left the button.');
+        });
+
+        // Button click event
+        button.addEventListener('click', () => {
+            alert('Button was clicked!');
+            button.style.backgroundColor = '#ff5722'; // Changes color on click
+            button.textContent = 'Thank You!';
+        });
+    </script>
+
+</body>
+</html>
